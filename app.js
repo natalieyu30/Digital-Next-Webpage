@@ -1,10 +1,15 @@
+// SHOW MENU
 const toggleBtn = document.querySelector('.toggle-btn');
 const navList = document.querySelector('.nav-list');
-console.log(toggleBtn)
-console.log(navList)
+// console.log(toggleBtn)
+// console.log(navList)
 
-// function toggleLsit() {
-//   navList.classList.toggle('nav-list')
-// }
 toggleBtn.addEventListener('click', () => navList.classList.toggle('show-list'))
-// toggleBtn.onclick = toggleLsit
+
+
+// REMOVE MENU MOBILE WHEN CLICKED
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => link.addEventListener('click', () => {
+  navList.classList.remove('show-list')
+  })
+);
