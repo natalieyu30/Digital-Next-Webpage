@@ -11,36 +11,44 @@
   <title>Welcome to Web Agency</title>
 </head>
 <body>
-  <!-- nav -->
-  <nav class="nav">
-    <div id='home' class="nav-container">
-      <div class="nav-header">
-        <a href="#banner" class="logo">Digital Next</a>
-        <button class='toggle-btn'> 
-          <i class="fa fa-arrow-down"></i>
-        </button>
+  <section id="header">
+    <!-- nav -->
+    <nav class="nav">
+      <div id='home' class="nav-container">
+        <div class="nav-header">
+          <a href="#banner" class="logo">Digital Next</a>
+          <button class='toggle-btn'> 
+            <i class="fa fa-arrow-down"></i>
+          </button>
+        </div>
+        <ul id="nav-list" class="nav-list">
+          <li><a class='nav-link active-link' href="#header">Home</a></li>
+          <li><a class='nav-link' href="#skills">Skills</a></li>
+          <li><a class='nav-link' href="#services">Services</a></li>
+          <li><a class='nav-link' href="#projects">Projects</a></li>
+          <li><a class='nav-link' href="#posts">Posts</a></li>
+        </ul>
       </div>
-      <ul id="nav-list" class="nav-list">
-        <li><a class='nav-link' href="#banner">Home</a></li>
-        <li><a class='nav-link' href="#skills">Skills</a></li>
-        <li><a class='nav-link' href="#services">Services</a></li>
-        <li><a class='nav-link' href="#projects">Portfolio</a></li>
-        <li><a class='nav-link' href="#posts">Work</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- banner -->
-  <header id="banner">
-    <div class="banner-title">
-      <h1 class="banner-text">Digital Next</h1>
-      <div class="banner-underline"></div>
-      <div class="banner-btn">
-        <button class="btn" type="button">Buy Now</button>
-        <button class="btn" type="button">About Us</button>
+    <!-- banner -->
+    <div id="banner">
+      <div class="banner-title">
+        <h1 class="banner-text">Digital Next</h1>
+        <div class="banner-underline"></div>
+        <div class="banner-btn">
+          <button class="btn" type="button">Buy Now</button>
+          <button class="btn" type="button">About Us</button>
+        </div>
       </div>
+    </div> 
+
+    <!-- scroll top -->
+    <div class="scroll-top">
+      <a href="#header"><i class="fas fa-arrow-up"></i></a>
     </div>
-  </header>
+  </section>
+
 
   <!-- skill section -->
   <section id="skills">
@@ -208,12 +216,12 @@
   </section>
 
   <!-- filler contact-->
-  <section id="filler-contact">
+  <div class="filler-contact">
     <div class="filler-section">
       <h1>We are professionals</h1>
       <button type='button' class="btn">Contact us</button>
     </div>
-  </section>
+  </div>
 
   <!-- posts -->
   <section id="posts">

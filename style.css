@@ -72,6 +72,9 @@ img {
 }
 
 /******************** nav ******************/
+#header {
+  position: relative;
+}
 .nav {
   width: 100vw;
   height: 71px;
@@ -89,7 +92,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--white);
+  /* border-bottom: 2px solid var(--white); */
 }
 .logo,
 .toggle-btn {
@@ -110,7 +113,7 @@ img {
 .nav-list {
   margin-right: 20px;
   width: 100%;
-  border-bottom: 2px solid var(--white);
+  /* border-bottom: 2px solid var(--white); */
 }
 nav li a {
   display: block;
@@ -132,14 +135,36 @@ nav li a:hover {
 nav ul {
   display: none;
 }
+.scroll-top {
+  position: fixed;
+  bottom: 3%;
+  right: 4%;
+  font-size: 34px;
+  background-color: transparent;
+  padding: 0 10px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  z-index: 10;
+  visibility: hidden;
+}
+.scroll-top i {
+  color: var(--blue);
+}
 .show-list {
   display: block;
+}
+.active-link {
+  color: var(--navy);
+  font-weight: 600;
+}
+.show-scrollTop {
+  visibility: visible;
 }
 
 @media screen and (min-width: 750px) {
   .nav {
     align-self: center;
-    border-bottom: 2px solid var(--white);
+    /* border-bottom: 2px solid var(--white); */
   }
   .nav-container {
     display: flex;
@@ -471,7 +496,7 @@ nav ul {
 }
 
 /*************** filler contact *************/
-#filler-contact {
+.filler-contact {
   width: 100vw;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(./images/computer2.jpg) fixed center/cover no-repeat;
@@ -482,20 +507,20 @@ nav ul {
   padding: 120px 60px;
 }
 
-#filler-contact h1 {
+.filler-contact h1 {
   font-size: 36px;
   color: var(--white);
   font-weight: 400;
   margin-bottom: 20px;
 }
-#filler-contact .btn {
+.filler-contact .btn {
   border-color: var(--white);
 }
-#filler-contact .btn:hover {
+.filler-contact .btn:hover {
   border-color: var(--blue);
 }
 @media screen and (min-width: 700px) {
-  #filler-contact h1 {
+  .filler-contact h1 {
     font-size: 50px;
   }
 }
