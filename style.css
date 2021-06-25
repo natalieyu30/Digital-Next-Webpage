@@ -7,11 +7,11 @@
 /* gray  */
 :root {
   --black: #191716;
-  --white: #e0e2db;
+  --white: #dedede;
   --gray: #81817f;
   --ivory: #f5e2d6;
   --light-blue: #78b5be;
-  --blue: #3e737a;
+  --blue: #bbe5eb;
   --dark-blue: #325e64;
   --navy: #083249;
 }
@@ -37,7 +37,7 @@ h1 {
   font-size: 24px;
 }
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .title {
@@ -58,7 +58,7 @@ img {
   font-size: 20px;
   padding: 10px 12px;
   color: var(--white);
-  border: 2px solid var(--blue);
+  border: 2px solid var(--white);
   border-radius: 6px;
   background: transparent;
   outline: none;
@@ -66,7 +66,9 @@ img {
   cursor: pointer;
 }
 .btn:hover {
+  color: var(--dark-blue);
   background-color: var(--blue);
+  border-color: var(--blue);
   opacity: 0.8;
   outline: none;
 }
@@ -81,31 +83,39 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--blue);
+  background-color: transparent;
   z-index: 10;
 }
+.nav.scroll-show {
+  background: var(--dark-blue);
+}
 .nav-container {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: transparent;
   /* border-bottom: 2px solid var(--white); */
+}
+.nav-header.show-list {
+  background: var(--dark-blue);
+  display: flex;
 }
 .logo,
 .toggle-btn {
-  font-size: 34px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 500;
   color: var(--white);
   margin: 0 24px;
   transition: color 0.5s linear;
 }
 .toggle-btn {
   /* margin-right: 30px; */
-  color: var(--white);
-  background-color: var(--blue);
+  /* color: var(--white); */
+  background-color: transparent;
   border: none;
   outline: none;
   padding: 15px;
@@ -122,15 +132,15 @@ nav li a {
   padding: 15px 15px;
   color: var(--white);
   transition: color 0.5s linear;
-  background-color: var(--blue);
+  background-color: var(--dark-blue);
 }
 nav li a:hover {
-  color: var(--black);
-  font-weight: 700;
+  color: var(--light-blue);
+  /* font-weight: 700; */
 }
 .logo:hover,
 .toggle-btn:hover {
-  color: var(--navy);
+  color: var(--light-blue);
 }
 nav ul {
   display: none;
@@ -143,18 +153,18 @@ nav ul {
   background-color: transparent;
   padding: 0 10px;
   border-radius: 50%;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--dark-blue);
   z-index: 10;
   visibility: hidden;
 }
 .scroll-top i {
-  color: var(--blue);
+  color: var(--dark-blue);
 }
 .show-list {
   display: block;
 }
 .active-link {
-  color: var(--navy);
+  color: var(--light-blue);
   font-weight: 600;
 }
 .show-scrollTop {
@@ -165,6 +175,9 @@ nav ul {
   .nav {
     align-self: center;
     /* border-bottom: 2px solid var(--white); */
+  }
+  .nav li a {
+    background: transparent;
   }
   .nav-container {
     display: flex;
@@ -195,7 +208,7 @@ nav ul {
 #banner {
   /* height: calc(100vh - 66px); */
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url(./images/banner-background.jpg) fixed center/cover no-repeat;
   display: flex;
@@ -204,9 +217,13 @@ nav ul {
 }
 .banner-text {
   font-size: 50px;
-  font-weight: 500;
-  color: var(--blue);
+  font-weight: 300;
+  color: var(--white);
   font-style: italic;
+}
+.banner-title span {
+  color: var(--dark-blue);
+  font-weight: 500;
 }
 .banner-underline {
   width: 200px;
@@ -252,7 +269,7 @@ nav ul {
 }
 .skills-icon {
   font-size: 50px;
-  color: var(--blue);
+  color: var(--dark-blue);
 }
 .skills-item h1 {
   letter-spacing: 1px;
@@ -497,7 +514,7 @@ nav ul {
 
 /*************** filler contact *************/
 .filler-contact {
-  width: 100vw;
+  /* width: 100vw; */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(./images/computer2.jpg) fixed center/cover no-repeat;
   display: flex;
@@ -547,6 +564,7 @@ nav ul {
 }
 .img-container img {
   opacity: 1;
+  height: 240px;
 }
 .img-container .fa {
   position: absolute;
@@ -587,7 +605,7 @@ nav ul {
 
 /*************** footer *************/
 footer {
-  background-color: var(--blue);
+  background-color: var(--dark-blue);
   padding: 60px;
   display: flex;
   flex-direction: column;
@@ -604,11 +622,11 @@ footer {
 }
 .footer-icons .fab {
   margin-right: 10px;
-  color: var(--light-blue);
+  color: var(--white);
   transition: color, transform 0.5s linear;
 }
 .footer-icons .fab:hover {
-  color: var(--navy);
+  color: var(--light-blue);
   transform: translateY(-10px);
 }
 @media screen and (min-width: 700px) {

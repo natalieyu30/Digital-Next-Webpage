@@ -1,10 +1,14 @@
 // SHOW MENU
 const toggleBtn = document.querySelector('.toggle-btn');
 const navList = document.querySelector('.nav-list');
+const navHeader = document.querySelector('.nav-header')
 // console.log(toggleBtn)
 // console.log(navList)
 
-toggleBtn.addEventListener('click', () => navList.classList.toggle('show-list'))
+toggleBtn.addEventListener('click', () => {
+  navList.classList.toggle('show-list');
+  navHeader.classList.toggle('show-list')
+})
 
 
 // REMOVE MENU MOBILE WHEN CLICKED
@@ -24,7 +28,7 @@ function scrollActiveLink() {
     const sectionTop = section.offsetTop-85;
     // console.log(sectionTop)
     const SectionHeight = section.offsetHeight;
-    sectionId = section.getAttribute('id')
+    const sectionId = section.getAttribute('id')
 
   
     if (scrollY >= sectionTop && scrollY < sectionTop + SectionHeight) {
@@ -40,10 +44,13 @@ window.addEventListener('scroll', scrollActiveLink);
 // SCROLL-TOP BTN
 function scrollTop() {
   const scrollTop = document.querySelector('.scroll-top');
+  const navbar = document.querySelector('.nav');
   if (this.scrollY >= 560) {
     scrollTop.classList.add('show-scrollTop');
+    navbar.classList.add('scroll-show');
   } else {
     scrollTop.classList.remove('show-scrollTop');
+    navbar.classList.remove('scroll-show');
   }
 }
 window.addEventListener('scroll', scrollTop);
