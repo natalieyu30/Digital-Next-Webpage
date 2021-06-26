@@ -1,13 +1,26 @@
 // SHOW MENU
 const toggleBtn = document.querySelector('.toggle-btn');
 const navList = document.querySelector('.nav-list');
-const navHeader = document.querySelector('.nav-header')
-// console.log(toggleBtn)
-// console.log(navList)
+const navbar = document.querySelector('.nav');
+
+const windowWidth = window.innerWidth;
+// console.log(windowWidth)
 
 toggleBtn.addEventListener('click', () => {
-  navList.classList.toggle('show-list');
-  navHeader.classList.toggle('show-list')
+  if (!navList.classList.contains('show-list')) {
+    navList.classList.add('show-list');
+    navbar.classList.add('scroll-show');
+  } else {
+    navList.classList.remove('show-list');
+    navbar.classList.remove('scroll-show');
+  }
+})
+
+window.addEventListener('resize', () => {
+  let width = window.innerWidth;
+  if (width > 750) {
+    navList.classList.remove('show-list');
+  }
 })
 
 
