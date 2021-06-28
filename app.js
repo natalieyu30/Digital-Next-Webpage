@@ -58,7 +58,7 @@ window.addEventListener('scroll', scrollActiveLink);
 function scrollTop() {
   const scrollTop = document.querySelector('.scroll-top');
   const navbar = document.querySelector('.nav');
-  if (this.scrollY >= 560) {
+  if (this.scrollY >= 300) {
     scrollTop.classList.add('show-scrollTop');
     navbar.classList.add('scroll-show');
   } else {
